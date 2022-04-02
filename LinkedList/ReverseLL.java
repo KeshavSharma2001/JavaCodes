@@ -1,10 +1,18 @@
 // using data property of node
 
+private Node getNodeAt(int idx) {
+      Node temp = head;
+      for (int i = 0; i < idx; i++) {
+        temp = temp.next;
+      }
+      return temp;
+}
+
 public void reverseDI() {  
       int li = 0; 
       int ri = size - 1;
       while(li < ri){
-        Node left = getNodeAt(li);  // getNode done previously...
+        Node left = getNodeAt(li);
         Node right = getNodeAt(ri);
 
         int temp = left.data;
@@ -14,7 +22,7 @@ public void reverseDI() {
         li++;
         ri--;
       }
-    }
+}
 
 
 //   l                 r
